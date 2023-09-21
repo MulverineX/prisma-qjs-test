@@ -22,6 +22,6 @@ jobs:
         run: "pnpm build"
 
       - name: Test with QuickJS
-        uses: refracturemedia/quickjs-gh-action/@v0.1.0
+        uses: refracturemedia/quickjs-gh-action/@v0.1.1
         with:
           mainFile: dist/bundle.js
