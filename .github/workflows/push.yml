@@ -19,7 +19,7 @@ jobs:
           version: 8
 
       - name: Compile
-        run: "pnpm i && pnpm webpack --mode=production"
+        run: "pnpm build"
 
       - name: Test with QuickJS
         uses: refracturemedia/quickjs-gh-action/@v0.1.0

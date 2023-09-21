@@ -1,5 +1,4 @@
 const path = require('path');
-const plugins = require('./pack/plugins.cjs');
 
 module.exports = {
   entry: './src/index.ts',
@@ -24,5 +23,4 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins
 };

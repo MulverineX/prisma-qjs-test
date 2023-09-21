@@ -8,14 +8,18 @@
     "/lib"
   ],
   "scripts": {
-    "test": "webpack --mode=production && echo \"\n[Test] bundle compiled, running...\n\" && qjs ./dist/bundle.js"
+    "build": "pnpm i && webpack --mode=production && ts-node --esm scripts/fix.ts",
+    "test": "pnpm build && echo \"\n[Test] bundle compiled, running...\n\" && qjs --std --unhandled-rejection ./dist/bundle.js"
   },
   "keywords": [],
   "author": "MulverineX",
   "license": "MIT",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.2",
+    "fs-extra": "^11.1.1",
     "prisma": "^5.3.1",
     "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
